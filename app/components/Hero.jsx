@@ -13,7 +13,7 @@ export default function Hero() {
         </button>
       </div>
       <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-        <img src="C:\Users\Kaveri\OneDrive\Documents" alt="Professional with laptop" className="rounded-lg shadow-lg" />
+        <img src="./prof.webp" alt="Professional with laptop" className="rounded-lg shadow-lg" />
       </div>
     </section>
   );
