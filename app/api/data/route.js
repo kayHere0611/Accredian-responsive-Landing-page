@@ -5,3 +5,16 @@ export async function GET() {
   ];
   return Response.json(data);
 }
+
+import Footer from "./components/Footer";
+
+export default function Home() {
+  return (
+    <main>
+      <Navbar />
+      <Hero />
+      <Features />
+      <Footer />
+    </main>
+  );
+}
