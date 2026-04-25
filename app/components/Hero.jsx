@@ -17,8 +17,8 @@ export default function Hero() {
   className="
     relative z-0 
     flex flex-col md:flex-row items-center justify-between 
-    text-black 
-    mt-8 sm:mt-12 md:mt-16 
+    text-black scroll-mt-24
+    mt-18 sm:mt-12 md:mt-16 
     scroll-mt-24 
     px-4 sm:px-6 md:px-8 
     py-0 sm:py-0 md:py-0 

@@ -41,7 +41,7 @@ useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, [
   <div className="block md:hidden">
     <div className="relative w-80 h-80 mx-auto rounded-full border-4 border-blue-200 flex items-center justify-center overflow-hidden">
       <div className="absolute text-center">
-        <h3 className="text-xl font-bold text-blue-600">OUR USPs</h3>
+        <h3 className="text-xl font-bold text-blue-600"></h3>
       </div>
       {items.map((item, idx) => {
         const angle = (idx / items.length) * 360;
