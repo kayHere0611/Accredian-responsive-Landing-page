@@ -1,7 +1,11 @@
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
-import Features from "./components/Features";
+// import Features from "./components/Features";
 
+import Stats from "./components/Stat"; 
+import AccreEdge from "./components/AccreEdge";
+import Partners from "./components/Partners";
+import CAT from "./components/CAT";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -9,7 +13,11 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <Features />
+      {/* <Features /> */}
+      <Stats /> 
+      <Partners />
+      <AccreEdge />
+      <CAT />
       <Footer />
     </main>
   );
