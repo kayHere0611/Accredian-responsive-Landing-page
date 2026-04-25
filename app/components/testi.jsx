@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useState } from "react";
+
 export default function Testimonials() {
   const testimonials = [
     {
@@ -13,6 +16,15 @@ export default function Testimonials() {
         "Accredian’s commitment to excellence is unmatched. They consistently go the extra mile to ensure our needs are met and exceeded, providing reliable support and high-quality service every step of the way.",
     },
   ];
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/data")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
+useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
 
   return (
     <section id="testimonials" className="py-16 bg-gray-50 text-center">

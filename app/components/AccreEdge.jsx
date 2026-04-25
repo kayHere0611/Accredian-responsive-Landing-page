@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useState } from "react";
+
 export default function AccredianEdge() {
   const items = [
   { title: "Flexible Delivery", icon: "📦", desc: "Online and offline options tailored to your needs." },
@@ -8,6 +11,14 @@ export default function AccredianEdge() {
   { title: "Diverse Offerings", icon: "➡️", desc: "Courses across industries, skill levels, and emerging fields." },
   { title: "Proven Impact", icon: "🎯", desc: "Trusted by leading organizations for measurable ROI." },
 ];
+
+const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch("/api/data")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
+useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
 
 
   return (

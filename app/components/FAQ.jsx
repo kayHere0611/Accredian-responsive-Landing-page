@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FAQ() {
   const categories = {
@@ -19,8 +19,18 @@ export default function FAQ() {
     ],
   };
 
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/data")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
   const [activeCategory, setActiveCategory] = useState("About the Course");
 
+  
+// Fetch data from mock or real API and render dynamically
+useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
   return (
    <section id="faq" className="py-16 bg-gray-50">
   <h2 className="text-3xl font-bold mb-4 text-center text-gray-800">

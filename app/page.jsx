@@ -1,6 +1,5 @@
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
-// import Features from "./components/Features";
 
 import Stats from "./components/Stat"; 
 import AccreEdge from "./components/AccreEdge";
@@ -18,7 +17,6 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      {/* <Features /> */}
       <Stats /> 
       <Partners />
       <AccreEdge />

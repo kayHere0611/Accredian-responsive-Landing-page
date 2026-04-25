@@ -1,4 +1,16 @@
+"use client";
+import { useEffect, useState } from "react";
+
+
 export default function Stats() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/data")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
+  
   const stats = [
     {
       number: "10K+",
@@ -13,6 +25,7 @@ export default function Stats() {
       label: "Active Learners Engaged In Dynamic Courses",
     },
   ];
+useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
 
   return (
     <section id="stats" className="relative z-20 py-16 bg-white text-center">

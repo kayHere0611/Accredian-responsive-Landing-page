@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useState } from "react";
+
 export default function CAT() {
   const items = [
     {
@@ -16,6 +19,15 @@ export default function CAT() {
       icon: "🛠️",
     },
   ];
+  
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/data")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
+useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
 
   return (
     <section id="CAT" className="py-16 bg-gray-50 text-center">
