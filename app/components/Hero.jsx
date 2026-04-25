@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative z-0 text-black flex flex-col md:flex-row items-center justify-between px-12 py-24 bg-white from-accredianBlue to-accredianIndigo">
+    <section id="hero" className="relative z-0 text-black flex flex-col md:flex-row items-center justify-between px-12 py-24 bg-white from-accredianBlue to-accredianIndigo">
       <div className="md:w-1/2">
         <h1 className="text-center text-6xl font-semibold sm:text-left text-black">
           Next-Gen 

@@ -11,7 +11,7 @@ export default function AccredianEdge() {
 
 
   return (
-    <section className="py-16 bg-gray-50 text-center">
+    <section id="edge" className="py-16 bg-gray-50 text-center">
       <h2 className="text-3xl font-bold mb-4 text-gray-800">The Accredian Edge</h2>
       <p className="text-lg mb-12 text-gray-600">
         Key Aspects of Our Strategic Training

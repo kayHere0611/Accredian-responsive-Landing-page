@@ -18,10 +18,11 @@ export default function CAT() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50 text-center">
-  <h2 className="text-3xl font-bold mb-4 text-gray-800">The Accredian Edge</h2>
+    <section id="CAT" className="py-16 bg-gray-50 text-center">
+  <h2 className="text-3xl font-bold mb-4 text-gray-800">The
+    <span className="text-blue-600 font-semibold"> CAT Framework</span></h2>
   <p className="text-lg mb-12 text-gray-600">
-    Key Aspects of Our Strategic Training
+    Our Proven approach for <span className="text-blue-600 font-semibold">Learning Excellence</span>
   </p>
 
   {/* ✅ Mobile: Circle USP diagram */}

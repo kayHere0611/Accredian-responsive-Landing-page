@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-blue-600 text-white">
+    <footer id="footer" className="bg-blue-600 text-white">
       {/* ✅ Top banner */}
       <div className="flex flex-col md:flex-row items-center justify-between px-6 py-6 max-w-6xl mx-auto">
         <h3 className="text-lg font-semibold mb-4 md:mb-0">

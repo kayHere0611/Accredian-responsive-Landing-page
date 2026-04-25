@@ -15,7 +15,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="relative z-20 py-16 bg-white text-center">
+    <section id="stats" className="relative z-20 py-16 bg-white text-center">
       <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Track Record</h2>
       <p className="text-lg mb-12 text-gray-600">
         The Numbers Behind Our Success
