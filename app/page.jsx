@@ -9,9 +9,12 @@ import Stats from "./components/Stat";
 import Footer from "./components/Footer";
 import HowItWorks from "./components/Howitworks";
 
+import Lead from "./components/Lead";
+
 export default function Home() {
   return (
     <main>
+      <Lead />
       <Navbar /> 
       <Hero />  
       <Stats />  
