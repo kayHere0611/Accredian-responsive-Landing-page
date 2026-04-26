@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
 
 export default function HowItWorks() {
   const steps = [
@@ -19,16 +17,6 @@ export default function HowItWorks() {
       icon: "🚀",
     },
   ];
-  
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/data")
-      .then((res) => res.json())
-      .then(setData);
-  }, []);
-useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
-
 
   return (
     <section id="how-it-works" className="py-16 bg-gray-50 text-center">

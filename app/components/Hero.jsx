@@ -1,15 +1,6 @@
-"use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Hero() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/data")
-      .then((res) => res.json())
-      .then(setData);
-  }, []);
 
   return (
 <section

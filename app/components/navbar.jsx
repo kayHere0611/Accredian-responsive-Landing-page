@@ -1,9 +1,5 @@
-"use client";
-
-import { useState } from "react";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
 
   const links = [
     { name: "Home", href: "#hero" },

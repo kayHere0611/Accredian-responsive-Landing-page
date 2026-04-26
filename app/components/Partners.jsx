@@ -1,14 +1,5 @@
-"use client";
-import { useEffect, useState } from "react";
 
 export default function Partners() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/data")
-      .then((res) => res.json())
-      .then(setData);
-  }, []);
 
   const logos = [
     { src: "/Reliance.png", alt: "Reliance Industries" },
@@ -41,21 +32,6 @@ useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, [
     ))}
   </div>
 </div>
-{/* 
-
-<div className="overflow-hidden sm:hidden">
-  <div className="scroll-logos">
-    {[...logos, ...logos].map((logo, idx) => (
-      <img
-        key={idx}
-        src={logo.src}
-        alt={logo.alt}
-        className="h-16 object-contain flex-shrink-0"
-      />
-    ))}
-  </div>
-</div> */}
-
 
   {/* Tablet/Desktop: normal grid */}
   <div className="hidden sm:flex flex-wrap justify-center gap-8">

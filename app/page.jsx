@@ -1,3 +1,6 @@
+" use client ";
+import { useState } from "react";
+
 import Testimonials from "./components/testi";
 import FAQ from "./components/FAQ";
 import CAT from "./components/CAT";
@@ -12,20 +15,29 @@ import HowItWorks from "./components/Howitworks";
 import Lead from "./components/Lead";
 
 export default function Home() {
+  const [submitted, setSubmitted] = useState(false);
+
+
   return (
     <main>
-      <Lead />
-      <Navbar /> 
-      <Hero />  
-      <Stats />  
-      <Partners /> 
-      <AccreEdge />  
-      <CAT /> 
-      <HowItWorks /> 
-      <FAQ /> 
-      <Testimonials /> 
+      {!submitted ? (
+        <Lead onSuccess={() => setSubmitted(true)} /> 
+      ) : (
+        <>
+        <Lead />
+        <Navbar /> 
+        <Hero />  
+        <Stats />  
+        <Partners /> 
+        <AccreEdge />  
+        <CAT /> 
+        <HowItWorks /> 
+        <FAQ /> 
+        <Testimonials /> 
 
-      <Footer />
+        <Footer />
+      </>
+      )}
     </main>
   );
 }
