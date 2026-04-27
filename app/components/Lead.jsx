@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function LeadCaptureForm() {
+export default function LeadCaptureForm({onSuccess}) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +20,7 @@ export default function LeadCaptureForm() {
     setLoading(true);
     setStatus("");
 
+    try{
     const res = await fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -32,6 +33,12 @@ export default function LeadCaptureForm() {
       onSuccess?.()
     } else {
       setStatus("❌ Something went wrong. Please try again.");
+    }
+  }
+  catch(err){
+    setStatus("❌ Server error. Please retry.");
+    } finally {
+      setLoading(false);
     }
 
     setLoading(false);
@@ -78,6 +85,12 @@ export default function LeadCaptureForm() {
             rows="4"
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
           />
+          {/* <button type="submit" disabled={loading}>
+        {loading ? "Sending..." : "Submit"}
+      </button>
+
+      {status && <p>{status}</p>} */}
+
           <button
             type="submit"
             disabled={loading}

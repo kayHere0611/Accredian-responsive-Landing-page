@@ -1,5 +1,4 @@
 
-
 const items = [
   { title: "Tailored Solutions", icon: "💡", desc: "Programs customized to your organization’s goals and challenges." },
   { title: "Expert Guidance", icon: "👤", desc: "Learn from industry leaders with real-world success." },

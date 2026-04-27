@@ -18,6 +18,7 @@ export default function CAT() {
     },
   ];
 
+
   return (
     <section id="CAT" className="py-16 bg-gray-50 text-center">
       <h2 className="text-3xl font-bold mb-4 text-gray-800">

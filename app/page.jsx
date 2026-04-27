@@ -1,4 +1,4 @@
-" use client ";
+"use client"
 import { useState } from "react";
 
 import Testimonials from "./components/testi";
@@ -24,7 +24,6 @@ export default function Home() {
         <Lead onSuccess={() => setSubmitted(true)} /> 
       ) : (
         <>
-        <Lead />
         <Navbar /> 
         <Hero />  
         <Stats />  

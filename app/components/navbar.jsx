@@ -1,5 +1,12 @@
+"use client";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const logos = [
+    { src: "/logo.png", alt: "Reliance Industries" },
+  ]
 
   const links = [
     { name: "Home", href: "#hero" },
@@ -17,9 +24,11 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <div className="text-2xl font-bold text-blue-600">
+        {/* <div className="text-2xl font-bold text-blue-600">
           Accredian
-        </div>
+        </div> */}
+        
+
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex gap-6 text-gray-700 font-medium">

@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 
 export default function Partners() {
 
@@ -9,8 +11,9 @@ export default function Partners() {
     { src: "/adp.png", alt: "ADP" },
     { src: "/bayer.png", alt: "Bayer" },
   ];
-// Fetch data from mock or real API and render dynamically
-useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
+
+  const [data, setData] = useState(null);
+  useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, []);
 
   return (
     <section id="partn" className="py-16 bg-gray-50 text-center">
