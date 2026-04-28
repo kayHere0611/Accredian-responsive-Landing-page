@@ -7,7 +7,7 @@ export default function Hero() {
   id="hero"
   className="
     relative z-0 
-    flex flex-col md:flex-row items-center justify-between 
+    flex flex-col-reverse md:flex-row items-center justify-between 
     text-black scroll-mt-24
     mt-18 sm:mt-12 md:mt-16 
     scroll-mt-24 

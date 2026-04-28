@@ -58,8 +58,11 @@ export default function LeadCaptureForm({onSuccess}) {
             value={formData.name}
             onChange={handleChange}
             required
+            pattern="[A-Za-z\s]+"
+            title="Name should contain only letters"
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
           />
+
           <input
             type="email"
             name="email"
@@ -75,8 +78,12 @@ export default function LeadCaptureForm({onSuccess}) {
             placeholder="Phone Number"
             value={formData.phone}
             onChange={handleChange}
+            inputMode="numeric"
+            pattern="[0-9]{10}"
+            title="Phone number should be 10 digits"
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
           />
+          
           <textarea
             name="message"
             placeholder="Your Message"
@@ -85,11 +92,6 @@ export default function LeadCaptureForm({onSuccess}) {
             rows="4"
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
           />
-          {/* <button type="submit" disabled={loading}>
-        {loading ? "Sending..." : "Submit"}
-      </button>
-
-      {status && <p>{status}</p>} */}
 
           <button
             type="submit"

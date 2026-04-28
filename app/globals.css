@@ -37,7 +37,7 @@ body {
 .scroll-logos {
   display: flex;
   gap: 2rem;
-  width: max-content; /* ensures container is wide enough */
+  width: max-content; 
   animation: scroll 12s linear infinite;
 }
 

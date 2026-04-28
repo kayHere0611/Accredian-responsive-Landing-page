@@ -17,6 +17,7 @@ export default function Testimonials() {
     },
   ];
 
+  const [index, setIndex] = useState(0);
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -35,9 +36,28 @@ useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, [
         What Our Clients Are Saying
       </p>
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
+      {/* Mobile: finger swipe */}
+      <div className="md:hidden overflow-x-auto snap-x snap-mandatory flex">
         {testimonials.map((t, idx) => (
+          <div
+            key={idx}
+            className="snap-center flex-shrink-0 w-full text-left"
+          >
+            <div className="p-6 bg-white rounded-lg shadow text-left">
+            <img
+              src={t.logo}
+              alt={t.company}
+              className="h-12 mb-4 object-contain"
+            />
+            <p className="text-gray-700 italic mb-4">"{t.quote}"</p>
+          </div>
+          </div>
+        ))}
+      </div>
 
+      {/* Desktop: grid view */}
+      <div className="hidden md:grid grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
+        {testimonials.map((t, idx) => (
           <div
             key={idx}
             className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition text-left"
