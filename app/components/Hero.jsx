@@ -21,12 +21,13 @@ export default function Hero() {
 >
 
 
+
 <div className="md:w-1/2">
         <h1 className="text-center text-5xl font-semibold sm:text-left text-black">
           Next-Gen 
-          <span className="text-blue-600 font-semibold"> Expertise</span>
+          <span className="text-blue-500 font-semibold"> Expertise</span>
           <br /> For Your
-          <span className="text-blue-600 font-semibold"> Enterprise</span>
+          <span className="text-blue-500 font-semibold"> Enterprise</span>
         </h1>
         <br />
         <p className="space-y-3 font-circular text-2xl max-w-full mb-6">
@@ -64,7 +65,7 @@ export default function Hero() {
           </li>
         </ul>
 
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
           Enquire Now
         </button>
       </div>

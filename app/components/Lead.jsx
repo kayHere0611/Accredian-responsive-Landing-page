@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function LeadCaptureForm({onSuccess}) {
   const [formData, setFormData] = useState({
@@ -47,6 +48,13 @@ export default function LeadCaptureForm({onSuccess}) {
   return (
     <section id="lead-form" className="py-16 bg-gray-50">
       <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-8">
+        <Image
+          src="/logo.png"
+          alt="AccreLogo"
+          width={100}
+          height={50}
+          priority
+        />
         <h2 className="text-2xl font-bold text-center text-gray-900 mb-6">
           Get in Touch
         </h2>

@@ -21,23 +21,33 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-16 bg-gray-50 text-center">
       <h2 className="text-3xl font-bold mb-4 text-gray-800">
-        How We Deliver Results That Matter
+        How We &nbsp;
+        <span className="text-blue-500">
+          Deliver Results 
+        </span>
+        &nbsp; That Matter
       </h2>
+
       <p className="text-lg mb-12 text-gray-600">
-        A Structured Three-Step Approach to Skill Development
+        A Structured Three-Step Approach to
+        <span className="text-blue-500">
+           &nbsp; Skill Development
+        </span>
       </p>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {steps.map((step, idx) => (
           <div
             key={idx}
-            className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col items-center"
+            className="p-8 max-w-lg bg-blue-100 border border-blue-500 rounded-lg shadow hover:shadow-lg transition flex flex-col items-center"
           >
-            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-2xl mb-4">
+            <div className="relative rounded-lg text-center">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full shadow bg-blue-500 text-2xl absolute left-1/2 -top-6 transform -translate-x-1/2">
               {step.icon}
             </div>
-            <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
-            <p className="mt-2 text-gray-700">{step.desc}</p>
+            <h3 className="mt-14 text-xl font-semibold text-gray-900">{step.title}</h3>
+            <p className="hidden sm:block mt-2 text-gray-700">{step.desc}</p>
+          </div>
           </div>
         ))}
       </div>

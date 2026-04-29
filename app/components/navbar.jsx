@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -23,11 +24,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="flex justify-between items-center px-6 py-4">
-        {/* Logo */}
-        {/* <div className="text-2xl font-bold text-blue-600">
-          Accredian
-        </div> */}
-        
+        {/* Logo */}        
+        <Image src="/logo.png" alt="AccreLogo" width={150} height={100} priority/>
 
 
         {/* Desktop Menu */}

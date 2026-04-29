@@ -9,16 +9,26 @@ const items = [
   { title: "Flexible Delivery", icon: "📦", desc: "Online and offline options tailored to your needs." },
 ];
 
+const domains = [
+    { icon: "💡", label: "Product & Innovation Hub" },
+    { icon: "🧠", label: "Gen-AI Mastery" },
+    { icon: "👤", label: "Leadership Elevation" },
+    { icon: "📊", label: "Tech & Data Insights" },
+    { icon: "⚙️", label: "Operations Excellence" },
+    { icon: "🌐", label: "Digital Enterprise" },
+    { icon: "💰", label: "Fintech Innovation Lab" },
+  ];
+
 export default function AccredianEdge() {
   return (
     <section id="edge" className="py-16 px-4 font-semibold text-gray-950 text-center">
       {/* Header */}
-      <h1 className="text-3xl md:text-5xl font-bold">
-        The <span className="text-blue-600">Accredian Edge</span>
+      <h1 className="text-2xl md:text-5xl font-bold">
+        The <span className="text-blue-500">Accredian Edge</span>
       </h1>
-      <p className="mt-2 text-gray-900 ">
+      <p className="mt-2 font-medium text-gray-900 ">
         Key Aspects of{" "}
-        <span className="text-blue-600 font-medium">
+        <span className="text-blue-500 font-medium">
           Our Strategic Training
         </span>
       </p>
@@ -55,7 +65,7 @@ export default function AccredianEdge() {
       }}
     >
       {/* Icon */}
-      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-600 text-white text-sm shadow">
+      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500 text-white text-sm shadow">
         {item.icon}
       </div>
 
@@ -81,7 +91,7 @@ export default function AccredianEdge() {
               <div key={i} className="flex flex-col items-center text-center relative">
 
                 {/* Circle Icon */}
-                <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl shadow-lg z-10">
+                <div className="w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center text-xl shadow-lg z-10">
                   {item.icon}
                 </div>
 
@@ -101,6 +111,46 @@ export default function AccredianEdge() {
 
         </div>
       </div>
+
+      {/* ================= DOMAIN EXPERTISE ================= */}
+<div className="mt-20 max-w-6xl mx-auto">
+
+  <h1 className="text-2xl md:text-5xl font-bold">
+    Our <span className="text-blue-500">Domain Expertise</span>
+  </h1>
+  <p className="mt-2 font-medium text-gray-900 ">
+    Specialized Programs{" "}
+    <span className="text-blue-500 font-medium">
+      Designed to Fuel Innovation
+    </span>
+  </p>
+<div className=" justify-center flex mt-10">
+<div className="grid grid-cols-2 lg:grid-cols-3 max-w-3xl w-full gap-6">
+  {domains.map((d, idx) => (
+    <div
+      key={idx}
+      className=
+      {`bg-gray-50 rounded-lg shadow hover:shadow-lg transition p-4 
+                   flex items-center gap-3 lg:flex-col lg:items-center lg:text-center
+                   ${idx === domains.length - 1 ? "lg:col-start-2" : ""}`}
+    >
+      {/* Icon */}
+      <div className="w-10 h-10 flex items-center justify-center text-white text-xl">
+        {d.icon}
+      </div>
+
+      {/* Label */}
+      <p className="text-gray-700 text-base md:text-lg font-semibold">{d.label}</p>
+    </div>
+  ))}
+</div>
+</div>
+
+
+
+
+</div>
+
     </section>
   );
 }

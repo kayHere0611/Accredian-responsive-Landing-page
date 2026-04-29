@@ -48,8 +48,8 @@ useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, [
           onClick={() => setActiveCategory(cat)}
           className={`px-4 py-2 rounded-lg font-semibold transition ${
             activeCategory === cat
-              ? "bg-blue-600 text-white"
-              : "bg-white text-gray-800 border"
+              ? "text-blue-500 bg-white"
+              : "bg-white text-gray-800 border-black"
           }`}
         >
           {cat}
@@ -65,7 +65,7 @@ useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData); }, [
         </div>
       ))}
       <div className="text-center mt-6">
-        <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
+        <button className="px-6 py-3 bg-blue-400 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
           Enquire Now
         </button>
       </div>

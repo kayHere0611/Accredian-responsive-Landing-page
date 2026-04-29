@@ -34,7 +34,7 @@ useEffect(() => { fetch("/api/data").then(res => res.json()).then(setData) .catc
             key={idx}
             className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-lg transition"
           >
-            <p className="text-4xl font-extrabold text-blue-600">{stat.number}</p>
+            <p className="text-4xl font-extrabold text-blue-500">{stat.number}</p>
             <p className="mt-2 text-lg text-gray-700">{stat.label}</p>
           </div>
         ))}
