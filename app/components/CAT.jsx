@@ -31,7 +31,7 @@ export default function CAT() {
 
       {/* ✅ Unified flow for all screens */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-12 max-w-2xl mx-auto relative">
-        <img src="/CATv2.svg" alt="CAT Framework" />
+        <img src="./CATv2.svg" alt="CAT Framework" />
       </div>
     </section>
   );
